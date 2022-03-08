@@ -14,3 +14,26 @@ class Solution {
         
     }
 }
+
+
+// Optimized Approach
+
+import java.util.*;
+class Solution {
+    public double average(int[] a) {
+      int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        double sum = 0;
+        for(int i=0;i<a.length;i++){
+            if(a[i] > max){
+                max = a[i];
+            }
+            if(a[i] < min){
+                min = a[i];
+            }
+            sum = sum + a[i];
+            
+        }
+        return (sum-min-max) / (a.length-2);
+    }
+}
