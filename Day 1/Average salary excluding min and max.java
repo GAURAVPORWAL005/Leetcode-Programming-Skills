@@ -37,3 +37,6 @@ class Solution {
         return (sum-min-max) / (a.length-2);
     }
 }
+
+
+// Optimized Approved
